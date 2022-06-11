@@ -1,0 +1,42 @@
+@tailwind base;
+@import "ant-design-vue/dist/antd.variable.less";
+@import "./antdv-overwrite";
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  svg {
+    display: inherit;
+    vertical-align: initial;
+  }
+}
+
+@layer utilities {
+  .mt-header {
+    margin-top: @layout-header-height;
+  }
+
+  .h-content {
+    height: calc(100vh - @layout-header-height);
+  }
+}
+
+.ant-table {
+@apply border border-gray-200 rounded-lg text-gray-500;
+}
+
+.ant-table-thead > tr > th {
+@apply bg-gray-50 text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.ant-menu-item:not(.ant-menu-item-selected) {
+@apply text-gray-500;
+}
+
+.ant-menu-submenu:not(.ant-menu-submenu-selected) {
+@apply text-gray-600;
+}
+
+.ant-card {
+@apply border border-gray-200 rounded-lg overflow-hidden;
+}
